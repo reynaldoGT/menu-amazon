@@ -10,7 +10,7 @@ btnDepartamento.addEventListener('mouseover', () => {
         grid.classList.add('active');
     }
 })
-btnDepartamento.addEventListener('mouseleave', () => {
+grid.addEventListener('mouseleave', () => {
     if (!esDispositivoMovil()) {
         grid.classList.remove('active');
     }
@@ -90,7 +90,7 @@ document.querySelectorAll('#menu .categorias a').forEach((elemento) => {
             console.log('agregaste el active')
             contenedorSubCategorias.classList.add('active')
 
-            document.querySelectorAll('#menu .subcategorias').forEach((categoria) => {
+            document.querySelectorAll('#menu .subcategoria').forEach((categoria) => {
                 categoria.classList.remove('active');
                 if (categoria.dataset.categoria == e.target.dataset.categoria) {
                     console.log('agregaste el active')
